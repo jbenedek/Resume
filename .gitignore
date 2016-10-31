@@ -6,4 +6,5 @@
 *.dvi
 *.swp
 *.tmp
-
+BACKUP.tex
+BACKUP.*
