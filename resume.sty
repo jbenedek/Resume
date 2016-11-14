@@ -1,0 +1,119 @@
+% resume.sty
+% 
+% (c)Jeremy Benedek 
+%
+%% This program can be redistributed and/or modified under the terms
+%% of the LaTeX Project Public License Distributed from CTAN archives
+%% in directory macros/latex/base/lppl.txt.
+% 
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{resume}
+[2011/01/11 v0.01 LaTeX package for my own purpose]
+
+\RequirePackage{latexsym}
+\RequirePackage[empty]{fullpage}
+\RequirePackage[usenames,dvipsnames]{color}
+\RequirePackage{graphicx}
+\RequirePackage{verbatim}
+\RequirePackage[pdftex]{hyperref}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\hypersetup{
+  colorlinks,%
+  citecolor=black,%
+  filecolor=black,%
+  linkcolor=black,%
+  urlcolor=black 
+  %urlcolor=mygreylink     % can put red here to better visualize the links
+}
+\let\myDate\date
+\urlstyle{same}
+\definecolor{mygrey}{gray}{.85}
+\definecolor{mygreylink}{gray}{.40}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
+
+%RES items
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+
+\newcommand{\ressubheading}[4]{
+  \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\edusubheading}[4]{
+  %   \begin{tabular*}{4.5in}{l@{\extracolsep{\fill}}r}
+  \textbf{#1}   \textit{#2} \hspace*{\fill}  \textit{#3} 
+  \\ \textit{#4}  \\
+  %  \end{tabular*}
+\vspace{-6pt}}
+
+\newcommand{\ressubsubheading}[2]{
+  \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+    \textit{#1} & \textit{#2} \\
+\end{tabular*}\vspace{-6pt}}
+
+%Footers
+\newenvironment{footer}{\par\vspace*{\fill}}{\clearpage}
+\newcommand{\footCover}{\begin{footer}  
+  \begin{center}\footnotesize \textit{This Cover Letter was typeset in \LaTeX. Source files are available at https://github.com/jbenedek/Resume} \end{center}
+  \end{footer}
+}
+\newcommand{\footResume}{\begin{footer}
+  \begin{center}\footnotesize
+    \textit{This Resume was typeset in \LaTeX. Source files are available at https://github.com/jbenedek/Resume}
+  \end{center}
+\end{footer}
+}
+
+%Headers
+\newcommand{\mywebheader}{
+  \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+    \textbf{\LARGE \myName} & benedek.jeremy@gmail.com\\
+    {\footnotesize \texttt{\colorbox{yellow}{[public web version:  address \& phone omitted]}}} & http://jeremybenedek.com \\
+  \end{tabular*}
+  \\
+\vspace{0.1in}}
+\newcommand{\myheader}{
+  \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+    \textbf{\huge \myName} & benedek.jeremy@gmail.com\\
+    Bloomington, IN & linkedin.com/in/JeremyBenedek \\
+    (812) 606-4104 & github.com/jbenedek	
+  \end{tabular*}
+  \\
+\vspace{0.1in}}
+
+%Signatures
+\newcommand{\mysignature}{ \begin{flushleft} 
+    \close \\
+    \includegraphics[width=2.5in, height=.8in, keepaspectratio=false, angle=0]{mysignature} \\
+    \myName \\
+  \end{flushleft}
+}
+\newcommand{\mysignaturexdvi}{\begin{flushleft}
+    \close \\
+    ~\\
+    \myName \\
+  \end{flushleft}
+}
+
+
+\newcommand{\myName}{John R. Doe}
+\newcommand{\close}{Sincerly:}
+
+\endinput
+
+
+%%
+%% End of file `mypackage.sty'.

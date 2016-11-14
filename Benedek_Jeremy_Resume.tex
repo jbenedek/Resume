@@ -1,4 +1,4 @@
-% resume.tex
+% Benedek_Jeremy_Resume.tex
 %
 % (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
 % (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
@@ -9,253 +9,123 @@
 
 
 %TODO:
-% REMOVE LINKS (DONE 30OCT2016)
-% UPDATE INFO (DONE 31OCT2016)
-% NEW HEADING (DONE 31OCT2016) 
-% Comment and modify the code, make it my own, make some functions
 
-
-% GENERAL NOTE:  There may be some notes specific to myself.  If you're only interested in my LaTeX source or it doesn't make sense, please disregard it.
-
+%-----------------------------------------------------------
 \documentclass[letterpaper,11pt]{article}
+\usepackage{resume}
+\renewcommand{\myName}{Jeremy R. Benedek}
 
 %-----------------------------------------------------------
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage[pdftex]{hyperref}
-\hypersetup{
-  colorlinks,%
-  citecolor=black,%
-  filecolor=black,%
-  linkcolor=black,%
-  urlcolor=black 
-  %urlcolor=mygreylink     % can put red here to better visualize the links
-}
-\urlstyle{same}
-\definecolor{mygrey}{gray}{.85}
-\definecolor{mygreylink}{gray}{.40}
-\textheight=9.0in
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
+\begin{document}
+\myheader
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{0.375in}
-\addtolength{\textwidth}{0.5in}
-\addtolength{\topmargin}{-.375in}
-\addtolength{\textheight}{0.75in}
-
-%-----------------------------------------------------------
-%Custom commands
-\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
-  \newcommand{\ressubheading}[4]{
-    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{#3} & \textit{#4} \\
-  \end{tabular*}\vspace{-6pt}}
-\newcommand{\edusubheading}[4]{
- %   \begin{tabular*}{4.5in}{l@{\extracolsep{\fill}}r}
-  \textbf{#1}   \textit{#2} \hspace*{\fill}  \textit{#3} 
-      \\ \textit{#4}  \\
-%  \end{tabular*}
-\vspace{-6pt}}
-
-\newenvironment{footer}{\par\vspace*{\fill}}{\clearpage}
-
-  \newcommand{\ressubsubheading}[2]{
-    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-      \textit{#1} & \textit{#2} \\
-  \end{tabular*}\vspace{-6pt}}
-  %-----------------------------------------------------------
-
-  %-----------------------------------------------------------
-  %General Resume Tips
-  %   No periods!  Technically, nothing in this document is a full sentence.
-  %   Use parallelism by ending key words with the same thing,  i.e. "Coordinated; Designed; Communicated".
-  %   More tips on bottom of this LaTeX document.
-  %-----------------------------------------------------------
-
-  \begin{document}
-
-  \newcommand{\mywebheader}{
-    \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-      \textbf{\LARGE Jeremy R. Benedek} & benedek.jeremy@gmail.com\\
-      {\footnotesize \texttt{\colorbox{yellow}{[public web version:  address \& phone omitted]}}} & http://jeremybenedek.com \\
-    \end{tabular*}
-    \\
-  \vspace{0.1in}}
-
-  \newcommand{\myheader}{
-    \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-      \textbf{\huge Jeremy R. Benedek} & benedek.jeremy@gmail.com\\
-      Bloomington, IN & linkedin.com/in/JeremyBenedek \\
-    (812) 606-4104 & github.com/jbenedek	
-    \end{tabular*}
-    \\
-  \vspace{0.1in}}
-
-
-  % CHANGE HEADER SOURCE HERE
-  \myheader
-
-  %%%%%%%%%%%%%%%%%%%%%%
-  \resheading{Education}
-  \begin{itemize}
-    \item
+%-----EDUCATION---------------------------------------------
+\resheading{Education}
+\begin{itemize}
+  \item
     \edusubheading{Indiana University}{Bloomington, IN}{Graduation: May 2018} 
     {Bachelor of Science in Computer Science \& Bachelor of Arts in Spanish Linguistics (Dual Degree)}  
-    { \footnotesize
+    { \normalsize  
       \begin{itemize}
 	  \resitem{Recipient: Cox Exploratory Scholarship; Full-Ride scholarship based on academic merit} 
 	  \resitem{Direct-Admit Scholar: School of Informatics and Computing}
 	  \resitem{School of Informatics and Computing Dean’s List: Fall 14, Spring 15, Fall 15, Spring 15}
 	  \resitem{Studied abroad in Santiago, Dominican Republic during Summer 2016}
 	  \resitem{GPA: 3.67/4.00} 
-	\end{itemize}
-      }
-\end{itemize} % End Education list
+      \end{itemize}
+    }
+\end{itemize} 
 
-
-  %%%%%%%%%%%%%%%%%%%%%%
-  \resheading{Experience}
-  \begin{itemize}
-    \item %Bullet Point for each Corporation
-      \ressubheading{Indiana University Department of Athletics}{Bloomington, IN}
-      {IT Technician}{November 2014 -- Present}
-      { \footnotesize
-	\begin{itemize}
-	    \resitem{Provides Tier 1 support to athletics department staff/coaches and student-athletes}
-	    \resitem{Provides emergency technical support during home football and basketball games}
-	    \resitem{Received training on data and network security (PCI Data Security Standard)}
-	    \resitem{Automated via scripting the process for connecting members of the media to the network, saving 5 minutes per user}
-	\end{itemize}
-      }
-
-    \item 
-      \ressubheading{University Division, Indiana University}{Bloomington, IN}{Peer Coach Site Manager}{September 2014 -- Present}
-      { \footnotesize
-	\begin{itemize}
-	    \resitem{Hold 8 hours of walk-in consultations weekly to help students with Academic Planning}
-	    \resitem{Ensure accountability of other Peer Coaches and serve as communication liaison between Peer Coaches and Program Coordinators}
-	    \resitem{Lead a technology testing committee to report on student-facing technologies to University IT personnel}
-	\end{itemize}
-      }
-
-    \item
-      \ressubheading{Lake County Prosecutor's Office}{Crown Point, IN}
-      {IT Intern}{June 2014 -- August 2014}
-      { \footnotesize
-	\begin{itemize}
-	    \resitem{Prepared courtrooms and tested equipment for use in criminal trials}
-	    \resitem{Researched inventive ways to save taxpayer money and reduce costs}
-	\end{itemize}
-      }
-      \ressubsubheading{User Support Specialist}{May 2016 -- July 2016}
-      { \footnotesize
+%-----EXPERIENCE--------------------------------------------
+\resheading{Experience}
+\begin{itemize}
+  \item 
+    \ressubheading{Indiana University Department of Athletics}{Bloomington, IN}
+    {IT Technician}{November 2014 -- Present}
+    {\normalsize 
+      \begin{itemize}
+	  \resitem{Provides Tier 1 support to athletics department staff/coaches and student-athletes}
+	  \resitem{Provides emergency technical support during home football and basketball games}
+	  \resitem{Received training on data and network security (PCI Data Security Standard)}
+	  \resitem{Automated via scripting the process for connecting members of the media to the network, saving 5 minutes per user}
+      \end{itemize}
+    }
+  \item 
+    \ressubheading{University Division, Indiana University}{Bloomington, IN}{Peer Coach Site Manager}{September 2014 -- Present}
+    { \normalsize 
+      \begin{itemize}
+	  \resitem{Hold 8 hours of walk-in consultations weekly to help students with Academic Planning}
+	  \resitem{Ensure accountability of other Peer Coaches and serve as communication liaison between Peer Coaches and Program Coordinators}
+	  \resitem{Lead a technology testing committee to report on student-facing technologies to University IT personnel}
+      \end{itemize}
+    }
+  \item
+    \ressubheading{Lake County Prosecutor's Office}{Crown Point, IN}
+    {IT Intern}{June 2014 -- August 2014}
+    {\normalsize 
+      \begin{itemize}
+	  \resitem{Prepared courtrooms and tested equipment for use in criminal trials}
+	  \resitem{Researched inventive ways to save taxpayer money and reduce costs}
+      \end{itemize}
+    }
+    \ressubsubheading{User Support Specialist}{May 2016 -- July 2016}
+    { \normalsize 
       \begin{itemize}
 	  \resitem{Independently provided IT support to 50 users in the Gary, IN satellite office}
 	  \resitem{Provided support for hardware, networking, operating systems, and propriety software}
-   	  \resitem{Worked with outside vendors and state and county IT officials to ensure system stability}
+	  \resitem{Worked with outside vendors and state and county IT officials to ensure system stability}
     \end{itemize} }
-    \item
-      \ressubheading{Northwest Athletic Officials Association}{Munster, IN}
-      	{Baseball Umpire}{May 2016 -- July 2016}
-	{\footnotesize
-	  \begin{itemize}
-	      \resitem{Using self-taught knowledge of the rules and mechanics, fairly arbitrated contests and calmly settle disputes}
-	      \resitem{Maintained control of game by making confident and decisive decisions}
-	  \end{itemize}
-      }
-  
-	    
-  \end{itemize}  % End Experience list
+  \item
+    \ressubheading{Northwest Athletic Officials Association}{Munster, IN}
+    {Baseball Umpire}{May 2016 -- July 2016}
+    {\normalsize 
+      \begin{itemize}
+	  \resitem{Using self-taught knowledge of the rules and mechanics, fairly arbitrated contests and calmly settle disputes}
+	  \resitem{Maintained control of game by making confident and decisive decisions}
+      \end{itemize}
+    }
+\end{itemize}  
 
-  
-  %%%%%%%%%%%%%%%%%%%%%%
-  \resheading{Languages, Skills, \& Technologies}
-  \begin{description}
-    \item[Proficient:] { \footnotesize 
-	Spanish, Java, LISP, Linux Command Line, Git, Vi/Vim, Windows XP/7/8/10, Debian
+%-----Skills------------------------------------------------
+\resheading{Languages, Skills, \& Technologies}
+\begin{description}
+  \item[Proficient:] {\normalsize 
+      Spanish, Java, LISP, Linux Command Line, Git, Vi/Vim, Windows XP/7/8/10, Debian
+    }
+  \item[Familiar With:] {\normalsize 
+      C/C++, \LaTeX, Mac OSX,
+    }
+  \item[Exposure To:]{\normalsize 
+    C\#, Visual Basic, PostgreSQL, GDB, HTML
+  }
+\end{description} 
 
-      }
-    \item[Familiar With:] { \footnotesize
-	C/C++, \LaTeX, Mac OSX,
-      }
-
-    \item[Exposure To:]{\footnotesize
-      C\#, Visual Basic, PostgreSQL, GDB, HTML}
-  \end{description} % End Skills list
+%------End--------------------------------------------------
+\footResume
+\end{document}
 
 
-  \begin{comment}
-  %%%%%%%%%%%%%%%%%%%%%%%%%PROJECTS
-  \resheading{Projects}
-  \begin{description}
-    \item[Name:] { \footnotesize Description of the project here. Maybe even information on how to see the project.} 
-    \item[Name:] { \footnotesize Description of the project here. Maybe even information on how to see the project.}
-  \end{description}
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%END PROJECTS
-\end{comment}
+%------Projects---------------------------------------------
+\resheading{Projects}
+\begin{description}
+  \item[Name:] { \footnotesize Description of the project here. Maybe even information on how to see the project.} 
+  \item[Name:] { \footnotesize Description of the project here. Maybe even information on how to see the project.}
+\end{description}
 
-  \begin{footer}
-  \begin{center}\footnotesize \textit{This Resume was typeset in \LaTeX. Source files are available at https://github.com/jbenedek/Resume} \end{center}
-  \end{footer}
-  \end{document}
-
-  
-  %Only Print References If Requested!  Maybe even put it in it's own page.  Must have same heading as first page.
-  %%%%%%%%%%%%%%%%%%%%%%
-  \newpage
-  \mywebheader
-  \resheading{References}
-  \begin{center}
-    \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}  l l l }
-     Myron Chenault & Alice Dobie-Galuski  & Dan Fitzsimmons \\
-      Director of IT & Coordinator & Assistant Athletic Director for IT \\ 
-      \vspace{10pt} 
-      Lake County Prosecutor's Office & IU Peer Coach Program  & IU Athletics \\  
+%------References-------------------------------------------
+%Creates a new page for References.
+\newpage
+\myheader
+\resheading{References}
+\begin{center}
+  \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}  l l l }
+    Myron Chenault & Alice Dobie-Galuski  & Dan Fitzsimmons \\
+    Director of IT & Coordinator & Assistant Athletic Director for IT \\ 
+    \vspace{10pt} 
+    Lake County Prosecutor's Office & IU Peer Coach Program  & IU Athletics \\  
     %Address Line 1  
-      Crown Point, IN & Bloomington, IN & Bloomington, IN \\
- %Phone Numbers    
-    \end{tabular*}
-  \end{center}
-
-%  \end{document}
-
-
-  %%%%%%%%%%%%%%%%%%%%%%%%
-  % GENERAL RESUME NOTES %
-  %%%%%%%%%%%%%%%%%%%%%%%%
-  Need to brush up on the skills section?  Here are some really good ideas:
-
-  - Communication: The ability to express and interpret ideas and convey knowledge. 
-  Skills like speaking effectively, writing concisely, listening attentively, expressing ideas, 
-  reporting information, editing, interviewing, and facilitating group discussion. 
-
-  - Research and Planning: The ability to search for specific knowledge and formulate a 
-  program for a definite course of action. Skills like forecasting, predicting, identifying 
-  issues, finding alternatives, gathering information, solving problems, setting goals, 
-  extracting information, and developing strategies. 
-
-  - Human Relations: The ability to apply interpersonal skills to resolve conflict, relate to 
-  people, and help people. Skills like providing support for others, listening, delegating 
-  with respect, representing others, asserting, developing rapport, and perceiving 
-  feelings. 
-
-  - Management, Organization, Leadership: The ability to supervise others and guide 
-  individuals and groups towards the completion of tasks. Skills like managing groups, 
-  selling ideas, making decisions, managing conflict, coordinating tasks, teaching, 
-  enlisting help. 
-
-  Source: 
-  http://www.squawkfox.com/2009/03/08/6-action-words-that-make-your-resume-rock/
-
-  Other Resources: 
-  http://www.tvmier.com/Resume_Education.html
-
-
+    Crown Point, IN & Bloomington, IN & Bloomington, IN \\
+    %Phone Numbers    
+  \end{tabular*}
+\end{center}
 
