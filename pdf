@@ -1,0 +1,8 @@
+##Jeremy Benedek
+#github.com/jbenedek
+#makes pdf files of all .tex files
+
+#!/bin/bash
+
+pdflatex *.tex
+

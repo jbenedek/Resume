@@ -1,3 +1,7 @@
+#Jeremy Benedek
+#github.com/jbenedek
+#Removes tmp files for tex projects
+
 #!/bin/bash
 rm -f *.aux
 rm -f *.dvi

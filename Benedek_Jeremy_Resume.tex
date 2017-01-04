@@ -14,11 +14,16 @@
 \documentclass[letterpaper,11pt]{article}
 \usepackage{resume}
 \renewcommand{\myName}{Jeremy R. Benedek}
-
 %-----------------------------------------------------------
 \begin{document}
 \myheader
 
+\newenvironment{myitemize}
+{ \begin{itemize}
+        \setlength{\itemsep}{0pt}
+	      \setlength{\parskip}{0pt}
+	          \setlength{\parsep}{0pt}     }
+{ \end{itemize}                  } 
 %-----EDUCATION---------------------------------------------
 \resheading{Education}
 \begin{itemize}
@@ -27,11 +32,12 @@
     {Bachelor of Science in Computer Science \& Bachelor of Arts in Spanish Linguistics (Dual Degree)}  
     { \normalsize  
       \begin{itemize}
-	  \resitem{Recipient: Cox Exploratory Scholarship; Full-Ride scholarship based on academic merit} 
-	  \resitem{Direct-Admit Scholar: School of Informatics and Computing}
-	  \resitem{School of Informatics and Computing Dean’s List: Fall 14, Spring 15, Fall 15, Spring 15}
+	  \resitem{Jesse H. Cox Scholar; Full-Ride scholarship based on academic merit}
+	  %	  \resitem{Recipient: Cox Exploratory Scholarship; Full-Ride scholarship based on academic merit} 
+	  %	  \resitem{Direct-Admit Scholar: School of Informatics and Computing}
 	  \resitem{Studied abroad in Santiago, Dominican Republic during Summer 2016}
-	  \resitem{GPA: 3.67/4.00} 
+	  \resitem{School of Informatics and Computing Dean’s List: Fall 14, Spring 15, Fall 15, Spring 15}
+	  \resitem{GPA: 3.64/4.00} 
       \end{itemize}
     }
 \end{itemize} 
@@ -44,12 +50,15 @@
     {IT Technician}{November 2014 -- Present}
     {\normalsize 
       \begin{itemize}
-	  \resitem{Provides Tier 1 support to athletics department staff/coaches and student-athletes}
-	  \resitem{Provides emergency technical support during home football and basketball games}
-	  \resitem{Received training on data and network security (PCI Data Security Standard)}
-	  \resitem{Automated via scripting the process for connecting members of the media to the network, saving 5 minutes per user}
+	  \resitem{Increased game-day efficiency by automating the process of connecting guests to the network, saving 5 minutes per user}
+	  \resitem{Create internal and user-facing documentation in a clear and concise manner as needed}
+	  \resitem{Diagnose, troubleshoot, and resolve a range of software, hardware, and network issues}
+	  \resitem{Provide time-critical, emergency technical support during home athletic events}
+	  %	  \resitem{Provides Tier 1 support to athletics department staff/coaches and student-athletes}
+	  %  \resitem{Received training on data and network security (PCI Data Security Standard)}	  \resitem{Automated via scripting the process for connecting members of the media to the network, saving 5 minutes per user}
       \end{itemize}
     }
+    \begin{comment}
   \item 
     \ressubheading{University Division, Indiana University}{Bloomington, IN}{Peer Coach Site Manager}{September 2014 -- Present}
     { \normalsize 
@@ -58,23 +67,29 @@
 	  \resitem{Ensure accountability of other Peer Coaches and serve as communication liaison between Peer Coaches and Program Coordinators}
 	  \resitem{Lead a technology testing committee to report on student-facing technologies to University IT personnel}
       \end{itemize}
-    }
+    } \end{comment}
   \item
     \ressubheading{Lake County Prosecutor's Office}{Crown Point, IN}
-    {IT Intern}{June 2014 -- August 2014}
+    {User Support Specialist}{May 2016 -- July 2016}
     {\normalsize 
+
+      \begin{itemize}
+	  \resitem{Independently provided IT support to 50 users in the Gary, IN satellite office}
+	  \resitem{Provided support for hardware, networking, operating systems, and propriety software}
+	  \resitem{Created user accounts, and managed user security and group policies in Active Directory}
+	  \resitem{Deployed Group Policy Objects to ensure security compliance with IRS Regulations}
+	  %	  \resitem{Worked with outside vendors and state and county IT officials to ensure system stability}
+      \end{itemize} 
+	  \ressubsubheading{IT Intern}{June 2014 -- August 2014}
+    { \normalsize 
       \begin{itemize}
 	  \resitem{Prepared courtrooms and tested equipment for use in criminal trials}
 	  \resitem{Researched inventive ways to save taxpayer money and reduce costs}
       \end{itemize}
     }
-    \ressubsubheading{User Support Specialist}{May 2016 -- July 2016}
-    { \normalsize 
-      \begin{itemize}
-	  \resitem{Independently provided IT support to 50 users in the Gary, IN satellite office}
-	  \resitem{Provided support for hardware, networking, operating systems, and propriety software}
-	  \resitem{Worked with outside vendors and state and county IT officials to ensure system stability}
-    \end{itemize} }
+    }
+
+    \begin{comment}
   \item
     \ressubheading{Northwest Athletic Officials Association}{Munster, IN}
     {Baseball Umpire}{May 2016 -- July 2016}
@@ -84,13 +99,41 @@
 	  \resitem{Maintained control of game by making confident and decisive decisions}
       \end{itemize}
     }
+\end{comment}
 \end{itemize}  
+
+%------Projects---------------------------------------------
+\resheading{Projects}
+\begin{myitemize}
+    \item \textbf{The VIM Quiz Game}  \hfill  \textit{github.com/jbenedek/c335-finalproject}
+    { \normalsize 
+      \begin{itemize}
+	  \resitem{Term project for Computer Structures/Embedded Systems (C335) completed in groups of 2}
+	  \resitem{Approximately 1,000 lines of code, written in C, including driver files to interface with LCD screen, SD card, DAC, gyroscope, \& Wii Nunchuk on a STM32 Discovery Board}
+	  \resitem{Implemented I2C, UART, SPI, DMA, \& Interrupt protocols}
+      \end{itemize}
+      }
+  \item \textbf{Sudoku Verifier}  \hfill \textit{github.com/jbenedek/SudokuVerifier}
+    {\normalsize 
+      \begin{itemize}
+	  \resitem{Command-line program that verifies the accuracy of a completed Sudoku Puzzle}
+	  \resitem{Programmed in Java using object-oriented programming principles of encapsulation and composition}
+      \end{itemize}
+    }
+\end{myitemize}
 
 %-----Skills------------------------------------------------
 \resheading{Languages, Skills, \& Technologies}
-\begin{description}
+
+\begin{myitemize}
+    
+  \item \textbf{Languages: }{\normalsize Java, LISP, C/C++, Bash, \LaTeX, Visual Basic, HTML}
+  \item \textbf{Tools: } {\normalsize Vi/Vim, Git, GNU Make, Linux, Windows, Mac OSX, GDB}
+  \item \textbf{Spanish: } {\normalsize Professional Working Proficiency}
+   
+    \begin{comment}
   \item[Proficient:] {\normalsize 
-      Spanish, Java, LISP, Linux Command Line, Git, Vi/Vim, Windows XP/7/8/10, Debian
+      Spanish, Java, LISP, Bash, Git, Vi/Vim, Windows XP/7/8/10, Debian
     }
   \item[Familiar With:] {\normalsize 
       C/C++, \LaTeX, Mac OSX,
@@ -98,18 +141,13 @@
   \item[Exposure To:]{\normalsize 
     C\#, Visual Basic, PostgreSQL, GDB, HTML
   }
-\end{description} 
+    \end{comment}
+\end{myitemize} 
+
 
 %------End--------------------------------------------------
-\footResume
+%\footResume
 \end{document}
 
-
-%------Projects---------------------------------------------
-\resheading{Projects}
-\begin{description}
-  \item[Name:] { \footnotesize Description of the project here. Maybe even information on how to see the project.} 
-  \item[Name:] { \footnotesize Description of the project here. Maybe even information on how to see the project.}
-\end{description}
 
 
