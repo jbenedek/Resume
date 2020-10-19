@@ -1,11 +1,11 @@
 % resume.sty
-% 
-% (c)Jeremy Benedek 
+%
+% (c)Jeremy Benedek
 %
 %% This program can be redistributed and/or modified under the terms
 %% of the LaTeX Project Public License Distributed from CTAN archives
 %% in directory macros/latex/base/lppl.txt.
-% 
+%
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{resume}
 [2011/01/11 v0.01 LaTeX package for my own purpose]
@@ -22,7 +22,7 @@
   citecolor=black,%
   filecolor=black,%
   linkcolor=black,%
-  urlcolor=black 
+  urlcolor=black
   %urlcolor=mygreylink     % can put red here to better visualize the links
 }
 \let\myDate\date
@@ -55,7 +55,7 @@
 
 \newcommand{\edusubheading}[4]{
   %   \begin{tabular*}{4.5in}{l@{\extracolsep{\fill}}r}
-  \textbf{#1}   \textit{#2} \hspace*{\fill}  \textit{#3} 
+  \textbf{#1}   \textit{#2} \hspace*{\fill}  \textit{#3}
   \\ \textit{#4}  \\
   %  \end{tabular*}
 \vspace{-6pt}}
@@ -67,7 +67,7 @@
 
 %Footers
 \newenvironment{footer}{\par\vspace*{\fill}}{\clearpage}
-\newcommand{\footCover}{\begin{footer}  
+\newcommand{\footCover}{\begin{footer}
   \begin{center}\footnotesize \textit{This Cover Letter was typeset in \LaTeX. Source files are available at https://github.com/jbenedek/Resume} \end{center}
   \end{footer}
 }
@@ -89,14 +89,14 @@
 \newcommand{\myheader}{
   \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
     \textbf{\huge \myName} & benedek.jeremy@gmail.com\\
-    Bloomington, IN & linkedin.com/in/JeremyBenedek \\
-    (812) 606-4104 & github.com/jbenedek	
+    Minneapolis, MN & linkedin.com/in/JeremyBenedek \\
+    (812) 606-4104 & github.com/jbenedek
   \end{tabular*}
   \\
 \vspace{0.1in}}
 
 %Signatures
-\newcommand{\mysignature}{ \begin{flushleft} 
+\newcommand{\mysignature}{ \begin{flushleft}
     \close \\
     \includegraphics[width=2.5in, height=.8in, keepaspectratio=false, angle=0]{mysignature} \\
     \myName \\
@@ -111,7 +111,7 @@
 
 
 \newcommand{\myName}{John R. Doe}
-\newcommand{\close}{Sincerly:}
+\newcommand{\close}{Sincerely:}
 
 \endinput
 
