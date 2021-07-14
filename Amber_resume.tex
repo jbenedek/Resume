@@ -1,0 +1,96 @@
+% Benedek_Jeremy_Resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+% (c) 2009-2012 Derek R. Hildreth <derek@derekhildreth.com> http://www.derekhildreth.com
+% (c) 2016 Jeremy R. Benedek <benedek.jeremy@gmail.com> http://jeremybenedek.com
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+
+%TODO:
+
+%-----------------------------------------------------------
+\documentclass[letterpaper,11pt]{article}
+\usepackage{resume}
+\renewcommand{\myName}{Amber Stainko}
+%-----------------------------------------------------------
+\begin{document}
+\myheader
+
+\newenvironment{myitemize}
+{ \begin{itemize}
+        \setlength{\itemsep}{0pt}
+	      \setlength{\parskip}{0pt}
+	          \setlength{\parsep}{0pt}     }
+{ \end{itemize}                  }
+
+%-----EXPERIENCE--------------------------------------------
+\resheading{Experience}
+\begin{itemize}
+
+    \item
+    \ressubheading{Target Corporation}{Minneapolis, MN}
+    {Software Engineer}{September 2018 -- Present}
+    {\normalsize
+      \begin{itemize}
+          \resitem{Fullstack engineer working in the Cybersecurity area, using Typescript, Vue, \& PostgreSQL}
+		      \resitem{Designed and documented user stories to support Epic and team goals}
+
+      \end{itemize}
+	\ressubsubheading{Software Engineer Intern}{May 2017 -- August 2017}
+{ \normalsize
+      \begin{itemize}
+      
+		      \resitem{Worked in an agile environment with the Pricing Team}
+		      \resitem{Effectively met with analysts and engineers to understand business logic and problems with current code}
+		      \resitem{Implemented a monitoring system to the online pricing using Java, Storm, and MYSQL}
+		      \resitem{Developed and ran end-to-end test cases for monitoring system implementation by understanding the technical and business justifications for development}
+      
+      \end{itemize}
+      }
+
+    }
+
+
+    \item
+    \ressubheading{Underdog Rescue}{Minneapolis, MN}
+    {Volunteer Dog Foster}{}
+    {\normalsize
+      \begin{itemize}
+              \resitem{Worked on the Document Imaging team, using Java, Git, JUnit, C++, SVN, \& Jenkins}
+
+      \end{itemize}
+    }
+
+\end{itemize}
+
+%-----EDUCATION---------------------------------------------
+\resheading{Education}
+\begin{itemize}
+  \item
+    \edusubheading{Indiana University}{Bloomington, IN}{May 2018}
+		{Bachelor of Science in Informatics} 
+    { \normalsize
+      \begin{itemize}
+		      \resitem{Minor in: Human Centered Computing \& Telecommunications}
+            	      \resitem{Studied abroad in Italy for a semester}
+         	      \resitem{Cumulative GPA: 3.62/4.00}
+      \end{itemize}
+    }
+\end{itemize}
+
+%-----Skills------------------------------------------------
+\resheading{Languages, Skills, \& Technologies}
+
+\begin{myitemize}
+
+	\item \textbf{Languages: }{\normalsize Typescript, Vue, Node, Jest, Cypress, Python} 
+\item \textbf{Tools: } {\normalsize ElasticSearch, PostgreSQL, Docker, MicroService Architecture, Cloud Infrastructure, TDD, CI/CD, Git}
+
+\end{myitemize}
+
+
+%------End--------------------------------------------------
+%\footResume
+\end{document}
