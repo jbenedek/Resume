@@ -26,12 +26,11 @@ jobs:
         with:
           root_file: "*.tex"
           glob_root_file: true
-          working_directory: "/resume"
           
       - name: Upload a Resume Zip Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
           name: resume
-          path: /resume
+          path: resume
 
     
