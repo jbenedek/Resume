@@ -6,6 +6,13 @@ on:
   pull_request:
     branches: [ master ]
 jobs:
+
+  lint-latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: LaTeX linter (chktex)
+        uses: j2kun/chktex-action@1.0.3
+       
   compile-latex:
     runs-on: ubuntu-latest
     steps:
