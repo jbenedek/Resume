@@ -5,14 +5,7 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-jobs:
-
-  lint-latex:
-    runs-on: ubuntu-latest
-    steps:
-      - name: LaTeX linter (chktex)
-        uses: j2kun/chktex-action@1.0.3
-       
+jobs:   
   compile-latex:
     runs-on: ubuntu-latest
     steps:
@@ -27,11 +20,9 @@ jobs:
         with:
           root_file: "*.tex"
           glob_root_file: true
-          
+
       - name: Upload a Resume Zip Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
           name: resume
           path: ${{ github.workspace }}/*.pdf
-
-    
