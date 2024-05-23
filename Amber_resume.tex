@@ -1,0 +1,115 @@
+% Benedek_Jeremy_Resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+% (c) 2009-2012 Derek R. Hildreth <derek@derekhildreth.com> http://www.derekhildreth.com
+% (c) 2016 Jeremy R. Benedek <benedek.jeremy@gmail.com> http://jeremybenedek.com
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+
+%TODO:
+
+%-----------------------------------------------------------
+\documentclass[letterpaper,11pt]{article}
+\usepackage{resume}
+\renewcommand{\myName}{Amber Stainko}
+%-----------------------------------------------------------
+\begin{document}
+\myheader
+
+\newenvironment{myitemize}
+{ \begin{itemize}
+        \setlength{\itemsep}{0pt}
+	      \setlength{\parskip}{0pt}
+	          \setlength{\parsep}{0pt}     }
+{ \end{itemize}                  }
+
+%-----EXPERIENCE--------------------------------------------
+\resheading{Experience}
+\begin{itemize}
+
+    \item
+    \ressubheading{Target Corporation}{Remote}
+    {Senior Software Engineer}{September 2018 -- Present}
+    {\normalsize
+      \begin{itemize}
+          \resitem{Fullstack Application engineer and Technical Lead in the Cybersecurity space, using Typescript, React, Kafka, Redis \& PostgreSQL}
+          % \resitem{Acted as a technical mentor, fostering a collaborative learning environment.}
+          \resitem{Championed a culture of collaboration, continuous learning, and blameless code reviews to support, mentor, and encourage professional development of team members}
+          \resitem{Collaborated with product and technical leadership to scope and to roadmap plan annual work and team goals }
+          \resitem{Crafted comprehensive technical plans and led crossteam collaborative efforts to provide new features to the overall org and SOAR platform }
+          \resitem{Wrote data migrations and indices to maintain a scalable and performant ElasticSearch cluster}
+          \resitem{Researched, investigated, and debugged user reported bugs to minimize user and business disruption}
+          % \resitem{Gathered story requirements and conducted user interviews to ensure a smooth UI/UX for new features}
+          \resitem{Created the design and led the implementation of key features, ensuring alignment with business requirements and industry best practices}
+		      % \resitem{Designed and documented user stories to support epic and team goals}
+          % \resitem{Contribute to the design, lifecycle management, and ownership of team's microservices}
+          \resitem{Worked in an Agile environment, using Test Driven Development, Continuous Integration \& Deployment, \& Scalable MicroServices}
+      \end{itemize}
+	\ressubsubheading{Software Engineer Intern}{May 2017 -- August 2017}
+{ \normalsize
+      \begin{itemize}
+		      \resitem{Fullstack engineer on the Pricing team building internal, analysts facing applications}
+		      \resitem{Effectively met with analysts and engineers to understand business logic and problems with current code}
+		      \resitem{Implemented a new monitoring system for online price changes}
+          \resitem{Developed and implemented end-to-end test cases based on business and technical requirements}
+      \end{itemize}
+      }
+
+    }
+
+
+      \item
+      \ressubheading{University Information Technology Services}{Bloomington, IN}
+      {Technology Center Consultant}{November 2015 -- April 2018}
+      {\normalsize
+        \begin{itemize}
+                \resitem{Educated faculty, staff and students on the uses of university provided technologies}
+                \resitem{Collaborated with co-workers and supervisors to troubleshoot technology problems along a variety of platforms in university run computer labs }
+        \end{itemize}
+      }
+
+
+    % \item
+    % \ressubheading{Underdog Rescue}{Minneapolis, MN}
+    % {Dog Foster}{}
+    % {\normalsize
+    %   \begin{itemize}
+    %           \resitem{Fostered dogs for an animal rescue, and volunteered and participated in adoption events and fundraisers}
+    %           \resitem{Trained foster dogs in house breaking, leash behavior, \& crate training }
+    %   \end{itemize}
+    % }
+
+\end{itemize}
+
+%-----EDUCATION---------------------------------------------
+\resheading{Education}
+\begin{itemize}
+  \item
+    \edusubheading{Indiana University}{Bloomington, IN}{May 2018}
+		{Bachelor of Science in Informatics}
+    { \normalsize
+      \begin{itemize}
+		          \resitem{Minor in: Human Centered Computing \& Telecommunications}
+            	\resitem{Studied abroad in Italy for a semester}
+         	     \resitem{Cumulative GPA: 3.62/4.00}
+      \end{itemize}
+    }
+\end{itemize}
+
+%-----Skills------------------------------------------------
+\resheading{Languages, Skills, \& Technologies}
+
+\begin{myitemize}
+
+	\item \textbf{Languages: }{\normalsize Typescript, Javascript, React, Vue, Node, JsonB, Jest, Cypress, Python}
+  \item \textbf{Tools: } {\normalsize ElasticSearch, PostgreSQL, Redis, Kafka, Docker, Git}
+  \item \textbf{Concepts: } {\normalsize MicroService Architecture, Cloud Infrastructure, TDD, CI/CD, Relational Databases}
+
+\end{myitemize}
+
+
+%------End--------------------------------------------------
+%\footResume
+\end{document}
