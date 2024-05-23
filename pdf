@@ -4,5 +4,8 @@
 
 #!/bin/bash
 
-pdflatex *.tex
+pdflatex Benedek_Jeremy_Resume.tex
 
+pdflatex Stainko_Amber_Resume.tex
+
+./cleanTex
