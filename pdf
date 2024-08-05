@@ -8,6 +8,6 @@ pdflatex Benedek_Jeremy_Resume.tex
 
 pdflatex Stainko_Amber_Resume.tex
 
-pdflatex Jeremy_Benedek_Resume.tex
+pdflatex Benedek_Resume.tex
 
 ./cleanTex
